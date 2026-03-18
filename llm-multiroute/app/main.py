@@ -1,10 +1,3 @@
-from pathlib import Path
-
-from dotenv import load_dotenv
-
-# 先加载 llm-multiroute/.env，再读配置（否则 OLLAMA_API_KEY 为空会 401）
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
